@@ -1,0 +1,178 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95) translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 0.3s ease-out;
+}
+
+.animate-scaleIn {
+    animation: scaleIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 10px;
+    transition: background 0.3s;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #a0a0a0;
+}
+
+/* Firefox scrollbar */
+.custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #c1c1c1 #f1f1f1;
+}
+
+/* Input and Textarea Enhanced Styles */
+input:focus,
+textarea:focus {
+    transform: translateY(-1px);
+}
+
+/* Button Hover Effect */
+button:not(:disabled):active {
+    transform: scale(0.98);
+}
+
+/* Backdrop Blur Animation */
+@keyframes backdropBlur {
+    from {
+        backdrop-filter: blur(0px);
+    }
+    to {
+        backdrop-filter: blur(8px);
+    }
+}
+
+/* Smooth Transitions */
+* {
+    transition-property: color, background-color, border-color, transform, box-shadow;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Loading State for Submit Button */
+button:disabled {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Gradient Border Effect on Focus */
+input:focus,
+textarea:focus {
+    position: relative;
+}
+
+/* Code Block Dark Theme */
+pre {
+    border-radius: 12px;
+    font-size: 0.875rem;
+    line-height: 1.7;
+}
+
+pre code {
+    display: block;
+    padding: 0;
+}
+
+/* Tab Button Active Indicator */
+button[class*="bg-white text-moss-green"] {
+    position: relative;
+}
+
+button[class*="bg-white text-moss-green"]::before {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40%;
+    height: 3px;
+    background: var(--moss-green);
+    border-radius: 10px 10px 0 0;
+    opacity: 0;
+    animation: slideUp 0.3s ease-out forwards;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+/* Improved Box Shadows */
+.shadow-2xl {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* Character Counter */
+input:focus + .character-counter,
+textarea:focus + .character-counter {
+    color: var(--moss-green);
+    font-weight: 600;
+}
+
+/* Review Section Cards */
+.bg-gradient-to-br {
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-gradient-to-br::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, transparent 100%);
+    pointer-events: none;
+}
+
+/* Smooth Page Transitions */
+@media (prefers-reduced-motion: no-preference) {
+    * {
+        scroll-behavior: smooth;
+    }
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 640px) {
+    .custom-scrollbar::-webkit-scrollbar {
+        width: 4px;
+    }
+}

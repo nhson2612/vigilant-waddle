@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+:root {
+    --moss-green: #55775a;
+    --dark-moss-green: #3d5940;
+}
+
+/* Main Colors */
+.bg-moss-green {
+    background-color: var(--moss-green);
+}
+
+.bg-dark-moss-green {
+    background-color: var(--dark-moss-green);
+}
+
+.text-moss-green {
+    color: var(--moss-green);
+}
+
+.border-moss-green {
+    border-color: var(--moss-green);
+}
+
+.border-moss-green\/20 {
+    border-color: rgba(85, 119, 90, 0.2);
+}
+
+/* Focus States */
+.focus\:border-moss-green:focus {
+    border-color: var(--moss-green);
+}
+
+.focus\:ring-moss-green:focus {
+    --tw-ring-color: var(--moss-green);
+}
+
+/* Hover States */
+.hover\:bg-dark-moss-green:hover:not(:disabled) {
+    background-color: var(--dark-moss-green);
+}
+
+.hover\:text-moss-green:hover {
+    color: var(--moss-green);
+}
+
+/* Gradients */
+.from-moss-green\/5 {
+    --tw-gradient-from: rgba(85, 119, 90, 0.05);
+}
+
+.to-moss-green\/10 {
+    --tw-gradient-to: rgba(85, 119, 90, 0.1);
+}
+
+/* Shadows */
+.shadow-moss-green\/30 {
+    --tw-shadow-color: rgba(85, 119, 90, 0.3);
+}
+
+.shadow-moss-green\/40 {
+    --tw-shadow-color: rgba(85, 119, 90, 0.4);
+}
